@@ -13,6 +13,7 @@ import LoginWidget from './Auth/LoginWidget';
 import { ReviewListPage } from './layouts/BookCheckoutPage/ReviewListPage/ReviewListPage';
 import { ShelfPage } from './layouts/ShelfPage/ShelfPage';
 import { MessagesPage } from './layouts/MessagesPage/MessagesPage';
+import {ManageLibrary} from './layouts/ManageLibraryPage/ManageLibrary';
 
 const oktaAuth = new OktaAuth(oktaConfig);
 
@@ -60,6 +61,7 @@ const restoreOriginalUri = async(_oktaAuth:any,originalUri:any) => {
             <Route path='/login/callback' component={LoginCallback}/>
             <SecureRoute path='/shelf'><ShelfPage/></SecureRoute>
             <SecureRoute path='/messages'><MessagesPage/></SecureRoute>
+            <SecureRoute path='/admin'><ManageLibrary/></SecureRoute>
         </Switch>
       </div>
       <Footer />
